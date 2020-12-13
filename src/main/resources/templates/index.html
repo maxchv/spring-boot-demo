@@ -30,7 +30,7 @@
         <td th:text="${task.id}"></td>
         <td th:text="${task.title}" th:title="${task.description}"></td>
         <td th:text="${task.deadline}"></td>
-        <td></td>
+        <td><a th:href="@{'/delete/'+${task.id}}">Delete</a> </td>
     </tr>
 </table>
 </body>
