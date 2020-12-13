@@ -16,5 +16,22 @@
     <br/>
     <input type="submit">
 </form>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Deadline</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tr th:each="task: ${tasks}">
+        <td th:text="${task.id}"></td>
+        <td th:text="${task.title}" th:title="${task.description}"></td>
+        <td th:text="${task.deadline}"></td>
+        <td></td>
+    </tr>
+</table>
 </body>
 </html>
